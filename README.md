@@ -6,7 +6,7 @@ My personal portfolio for selected software projects, competition work, robotics
 
 <p align="center">
   <a href="https://victoriamitsu.com">
-    <img src="./public/media/readme-preview.jpg" alt="Victoria Mitsu portfolio homepage" width="100%" />
+    <img src="./public/media/readme-preview.png" alt="Victoria Mitsu portfolio homepage" width="100%" />
   </a>
 </p>
 
