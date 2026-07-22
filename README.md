@@ -4,7 +4,28 @@ My personal portfolio for selected software projects, competition work, robotics
 
 [**Visit victoriamitsu.com**](https://victoriamitsu.com)
 
-![Victoria Mitsu portfolio social preview](https://victoriamitsu.com/opengraph-image)
+<p align="center">
+  <img
+    src="./public/media/victoria-mitsu-logo.png"
+    alt="Victoria Mitsu logo"
+    width="220"
+  />
+</p>
+
+<p align="center">
+  <a href="https://victoriamitsu.com">
+    <img
+      src="./public/media/readme-preview.png"
+      alt="Victoria Mitsu portfolio homepage"
+      width="100%"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <strong>Software Engineer & Product Builder</strong><br>
+  Web development, robotics, education, and creative technology.
+</p>
 
 ## About the project
 
@@ -92,4 +113,4 @@ Every pull request also runs linting and a production build through GitHub Actio
 ## Content rights
 
 This is a public source repository, but it is not a reusable portfolio template. The writing, photographs, videos, project materials, and competition documentation belong to Victoria Mitsu. Please do not reuse or redistribute them without permission.
-"# VictoriaMitsu_Portfolio" 
+
