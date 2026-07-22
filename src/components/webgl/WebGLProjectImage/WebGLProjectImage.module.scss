@@ -1,0 +1,27 @@
+.root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.fallbackImage {
+  object-fit: cover;
+}
+
+.canvasLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.canvasLayer canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .canvasLayer {
+    display: none;
+  }
+}

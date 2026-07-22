@@ -1,0 +1,296 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 0;
+  overflow: hidden;
+  background: #020712;
+  color: #d9fff8;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: clamp(4.4rem, 6vw, 5.7rem) var(--page-padding) 1.15rem;
+  z-index: 9;
+  border: 1px solid rgb(217 255 248 / 16%);
+  border-radius: clamp(1rem, 1.8vw, 1.75rem);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: -8vw;
+  bottom: -22vw;
+  width: 48vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(255 90 122 / 13%);
+  filter: blur(6rem);
+  pointer-events: none;
+}
+
+.backgroundAmbient,
+.background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.backgroundAmbient {
+  z-index: 0;
+}
+
+.backgroundAmbient img {
+  object-fit: cover;
+  transform: scale(1.08);
+  filter: blur(1.3rem) saturate(0.68) brightness(0.5);
+}
+
+.background {
+  z-index: 1;
+  will-change: transform;
+}
+
+.backgroundImage {
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1);
+  filter: saturate(0.88) contrast(1.02) brightness(0.78);
+}
+
+.blueGrade,
+.atmosphere,
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.blueGrade {
+  z-index: 2;
+  background:
+    linear-gradient(90deg, rgb(2 10 28 / 22%) 0%, transparent 34%, transparent 70%, rgb(2 10 28 / 16%) 100%),
+    linear-gradient(180deg, rgb(2 7 18 / 5%) 0%, transparent 60%, rgb(2 7 18 / 24%) 100%);
+}
+
+.atmosphere {
+  z-index: 3;
+  left: -4%;
+  right: -4%;
+  width: 108%;
+  background:
+    linear-gradient(112deg, rgb(25 111 211 / 9%) 0%, transparent 32%, rgb(124 247 212 / 5%) 53%, transparent 72%),
+    linear-gradient(180deg, transparent 42%, rgb(2 12 31 / 20%) 100%);
+  filter: blur(1.2rem);
+  will-change: transform;
+}
+
+.vignette {
+  z-index: 4;
+  box-shadow: inset 0 0 9rem rgb(0 0 0 / 20%);
+  background: linear-gradient(to bottom, rgb(0 0 0 / 4%), transparent 54%, rgb(0 0 0 / 28%));
+}
+
+.nameStage {
+  position: absolute;
+  z-index: 5;
+  top: clamp(10.75rem, 25vh, 15rem);
+  right: 0;
+  left: 0;
+  padding-inline: var(--page-padding);
+  will-change: transform, opacity;
+}
+
+.nameStage h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.8rem, 1.5vw, 1.8rem);
+  width: 100%;
+  font-size: clamp(5.6rem, 10.8vw, 12.5rem);
+  line-height: 0.8;
+  font-weight: 720;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: rgb(199 245 238 / 92%);
+  text-shadow: 0 1rem 4rem rgb(1 6 16 / 34%);
+  cursor: default;
+}
+
+.nameClip:last-child .nameLine {
+  color: transparent;
+  -webkit-text-stroke: clamp(1px, 0.11vw, 2px) rgb(199 245 238 / 80%);
+  text-stroke: clamp(1px, 0.11vw, 2px) rgb(199 245 238 / 80%);
+}
+
+.nameClip {
+  display: block;
+  overflow: hidden;
+  padding: 0.04em 5rem 0.06em;
+  margin-inline: -5rem;
+  margin-bottom: -0.06em;
+}
+
+.nameLine {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -0.045em;
+  will-change: transform;
+}
+
+.letterSlot {
+  display: block;
+  flex: 0 0 auto;
+  height: 0.8em;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: 0.8;
+  transform: translateZ(0);
+  transform-origin: center center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.mitsuLine { margin-left: 0; }
+
+.foreground {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.foregroundImage {
+  object-fit: contain;
+  object-position: center;
+}
+
+.intro {
+  position: absolute;
+  z-index: 10;
+  top: clamp(7.8rem, 14vh, 10rem);
+  left: var(--page-padding);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  color: #d9fff8;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgb(217 255 248 / 15%);
+  border-radius: 0.85rem;
+  background: rgb(2 7 18 / 22%);
+  backdrop-filter: blur(0.55rem);
+}
+
+.introIndex { padding-top: 0.22rem; font-size: 0.58rem; opacity: 0.65; }
+.intro h2 { font-size: clamp(1.2rem, 1.65vw, 2rem); line-height: 0.92; font-weight: 650; text-transform: uppercase; }
+.intro h2 span { display: block; }
+
+.sideText {
+  position: absolute;
+  z-index: 10;
+  right: calc(var(--page-padding) * 0.4);
+  top: 48%;
+  font-size: 0.55rem;
+  color: #7cf7d4;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+  opacity: 0.68;
+}
+
+.roleRow {
+  position: absolute;
+  z-index: 10;
+  bottom: clamp(4.5rem, 7vh, 5.8rem);
+  left: var(--page-padding);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #d9fff8;
+}
+
+.roleLine { width: clamp(3rem, 7vw, 7rem); height: 1px; background: #7cf7d4; opacity: 0.6; }
+.roleRow p { font-size: clamp(0.9rem, 1.25vw, 1.35rem); line-height: 0.95; font-weight: 600; text-transform: uppercase; }
+
+.bottomLeft,
+.bottomRight {
+  position: absolute;
+  z-index: 10;
+  bottom: 1.35rem;
+  display: flex;
+  align-items: center;
+  color: #d9fff8;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  opacity: 0.66;
+}
+
+.bottomLeft { left: var(--page-padding); gap: 0.9rem; }
+.bottomRight { right: var(--page-padding); gap: 1.5rem; }
+.scrollLine { position: relative; width: 3.5rem; height: 1px; overflow: hidden; background: rgb(217 255 248 / 22%); }
+.scrollLine span { position: absolute; inset: 0; background: #7cf7d4; transform: translateX(-100%); animation: scrollLine 2.4s var(--ease-out-expo) infinite; }
+
+@keyframes scrollLine { 0% { transform: translateX(-100%); } 50% { transform: translateX(0); } 100% { transform: translateX(100%); } }
+
+@media (max-width: 1100px) {
+  .nameStage h1 { font-size: 10.5vw; }
+}
+
+@media (max-width: 1024px) {
+  .backgroundAmbient { display: none; }
+  .backgroundImage { object-fit: cover; object-position: center; }
+  .foregroundImage { object-fit: cover; object-position: center; }
+  .nameStage { will-change: auto; }
+  .letterSlot { will-change: auto; }
+}
+
+@media (max-width: 767px) {
+  .hero { min-height: 0; }
+  .backgroundAmbient { display: none; }
+  .backgroundImage,
+  .foregroundImage { object-fit: cover; object-position: center; }
+  .backgroundImage { filter: saturate(0.9) contrast(1.01) brightness(0.8); }
+  .atmosphere { left: -10%; right: -10%; width: 120%; }
+  .hero::before { inset: 4.25rem 0.75rem 0.75rem; border-radius: 1.1rem; }
+  .hero::after { width: 90vw; right: -30vw; bottom: -25vw; }
+  .nameStage { top: 25%; padding-inline: 1.25rem; }
+  .nameStage h1 { flex-direction: column; align-items: flex-start; gap: 0.1rem; font-size: clamp(4rem, 20vw, 6.3rem); line-height: 0.74; }
+  .nameClip { padding-inline: 2.5rem; margin-inline: -2.5rem; }
+  .mitsuLine { margin-left: 0; }
+  .intro { top: clamp(5.6rem, 13vh, 7rem); left: 1.25rem; gap: 0.55rem; padding: 0; border: 0; background: transparent; backdrop-filter: none; }
+  .intro h2 { font-size: 1rem; }
+  .sideText { display: none; }
+  .roleRow { bottom: 4.8rem; left: 1.25rem; }
+  .roleLine { width: 2.6rem; }
+  .roleRow p { font-size: 0.66rem; }
+  .bottomLeft { left: 1.25rem; }
+  .bottomRight { display: none; }
+}
+
+@media (max-width: 390px) {
+  .nameStage h1 { font-size: 11.5vw; }
+}
+
+@media (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+  .nameStage { top: 31%; }
+  .intro { top: 4.25rem; }
+  .roleRow { bottom: 3.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollLine span { animation: none; }
+  .letterSlot { transform: none !important; }
+}
+
+@media (prefers-reduced-data: reduce) {
+  .backgroundAmbient,
+  .foreground,
+  .atmosphere { display: none; }
+}

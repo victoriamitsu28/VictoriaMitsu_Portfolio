@@ -1,0 +1,110 @@
+.root {
+  position: relative;
+  z-index: 4;
+  scroll-margin-top: 0;
+  padding: clamp(6rem, 11vw, 11rem) 0;
+  overflow: hidden;
+  border-top: 1px solid rgb(8 17 15 / 12%);
+  border-bottom: 1px solid rgb(8 17 15 / 12%);
+  background:
+    radial-gradient(circle at 92% 14%, rgb(255 90 122 / 18%), transparent 28rem),
+    radial-gradient(circle at 8% 88%, rgb(124 247 212 / 32%), transparent 34rem),
+    linear-gradient(145deg, #f6f3ea, #eaf5ef);
+  color: #061016;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: var(--page-padding);
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.58;
+}
+
+.meta span:first-child {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-pill);
+}
+
+.rail {
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  will-change: transform;
+}
+
+.track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.12em;
+  padding-right: 0.18em;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 14vw, 15rem);
+  line-height: 0.72;
+  letter-spacing: -0.085em;
+  font-weight: 750;
+}
+
+.track i {
+  display: inline-grid;
+  place-items: center;
+  width: 0.72em;
+  font-size: 0.28em;
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+.railOutline {
+  margin-top: 1.6rem;
+}
+
+.railOutline .track span {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-coral);
+  text-stroke: 1.5px var(--color-coral);
+}
+
+.statement {
+  position: relative;
+  width: min(70rem, calc(100% - (var(--page-padding) * 2)));
+  margin: clamp(5rem, 9vw, 9rem) auto 0;
+  padding-top: clamp(3.5rem, 6vw, 6rem);
+  border-top: 1px solid rgb(8 17 15 / 22%);
+  font-size: clamp(2.4rem, 5.5vw, 6.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+  font-weight: 620;
+}
+
+.statement::before {
+  content: "ABOUT / APPROACH";
+  position: absolute;
+  top: 1.1rem;
+  left: 0;
+  font-size: 0.6rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .root { padding-block: 6rem; }
+  .meta { gap: 2rem; padding-inline: 1.25rem; }
+  .meta span:last-child { max-width: 12rem; text-align: right; }
+  .track span { font-size: 24vw; }
+  .statement {
+    width: calc(100% - 2.5rem);
+    margin-top: 5rem;
+    font-size: 12.5vw;
+  }
+}

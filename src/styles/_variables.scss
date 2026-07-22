@@ -1,0 +1,27 @@
+:root {
+  --font-display: Arial, Helvetica, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --color-bg: #060812;
+  --color-bg-soft: #111827;
+  --color-text: #7cf7d4;
+  --color-text-light: #fff7ea;
+  --color-blue: #ff5a7a;
+  --color-ink: #08110f;
+  --color-paper: #f4f1e8;
+  --color-mint: #7cf7d4;
+  --color-coral: #ff5a7a;
+  --line-light: rgb(255 247 234 / 16%);
+  --line-dark: rgb(8 17 15 / 18%);
+  --shadow-soft: 0 1.5rem 5rem rgb(0 0 0 / 18%);
+  --page-padding: max(
+    clamp(1.25rem, 3vw, 4rem),
+    env(safe-area-inset-left),
+    env(safe-area-inset-right)
+  );
+  --header-height: 7rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.75rem;
+  --radius-pill: 999px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}

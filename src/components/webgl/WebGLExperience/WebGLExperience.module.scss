@@ -1,0 +1,18 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 8500;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.layer,
+.layer * {
+  pointer-events: none !important;
+}
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .layer {
+    display: none;
+  }
+}

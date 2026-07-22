@@ -1,0 +1,14 @@
+.rail {
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.rail[data-dragging="true"] {
+  cursor: grabbing;
+}
+
+.rail[data-dragging="true"] * {
+  pointer-events: none;
+}

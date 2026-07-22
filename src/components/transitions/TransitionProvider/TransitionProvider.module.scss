@@ -1,0 +1,108 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: none;
+  pointer-events: all;
+}
+
+.overlay { --transition-accent: #f3ede7; --transition-background: var(--transition-background); }
+
+.frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: #060812;
+  will-change: transform, width, height, clip-path, border-radius;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  will-change: transform;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgb(0 0 0 / 42%), transparent 48%),
+    linear-gradient(to right, rgb(0 0 0 / 18%), transparent 45%);
+}
+
+.interface {
+  position: absolute;
+  inset: auto var(--page-padding) 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: #fff7ea;
+}
+
+.labelClip {
+  display: block;
+  overflow: hidden;
+  max-width: 75vw;
+}
+
+.labelClip > span {
+  display: block;
+  font-size: clamp(2.2rem, 7vw, 8rem);
+  line-height: 0.78;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+  font-weight: 650;
+  will-change: transform;
+}
+
+.counter {
+  padding-bottom: 0.25rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .interface {
+    inset: auto 1.25rem 1.5rem;
+  }
+
+  .labelClip > span {
+    font-size: clamp(2.5rem, 15vw, 5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    display: none !important;
+  }
+}
+
+
+.flash {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--transition-accent);
+  mix-blend-mode: screen;
+}
+
+.accentBar {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: clamp(0.3rem, 0.65vw, 0.75rem);
+  background: var(--transition-accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
+}
