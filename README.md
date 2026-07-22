@@ -92,4 +92,4 @@ Every pull request also runs linting and a production build through GitHub Actio
 ## Content rights
 
 This is a public source repository, but it is not a reusable portfolio template. The writing, photographs, videos, project materials, and competition documentation belong to Victoria Mitsu. Please do not reuse or redistribute them without permission.
-"# VictoriaMitsu_Portofolio" 
+"# VictoriaMitsu_Portfolio" 
