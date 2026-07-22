@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
@@ -61,7 +62,16 @@ export function Header() {
       <nav className={styles.navigation} aria-label="Primary navigation">
         <Link href="/" data-magnetic data-cursor="link" data-cursor-label="HOME">Home</Link>
         <Link href="/#about" data-magnetic data-cursor="link" data-cursor-label="ABOUT">About</Link>
-        <Link href="/" className={styles.mark} aria-label="Homepage" data-magnetic data-cursor="link" data-cursor-label="HOME">V</Link>
+        <Link href="/" className={styles.mark} aria-label="Homepage" data-magnetic data-cursor="link" data-cursor-label="HOME">
+          <Image
+            src="/media/navbar-logo.png"
+            alt=""
+            width={32}
+            height={32}
+            className={styles.markLogo}
+            priority
+          />
+        </Link>
         <Link href="/#competitions" data-magnetic data-cursor="link" data-cursor-label="ARCHIVE">Archive</Link>
         <Link href="/#experience" data-magnetic data-cursor="link" data-cursor-label="WORK">Work</Link>
       </nav>
