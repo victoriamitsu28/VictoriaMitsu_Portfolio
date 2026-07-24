@@ -177,30 +177,53 @@
 .interested {
   display: inline-flex;
   align-items: center;
-  gap: 1.5rem;
-  min-height: 2.4rem;
-  padding: 0.7rem 0.85rem;
-  border: 1px solid rgb(124 247 212 / 42%);
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 10.5rem;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.6rem 0.55rem 1rem;
+  border: 1px solid #9bcdbf;
   border-radius: var(--radius-pill);
-  color: #9bcdbf;
-  font-size: 0.6rem;
-  letter-spacing: 0.05em;
+  background: #9bcdbf;
+  color: #07100e;
+  box-shadow:
+    0 0.8rem 2rem rgb(124 247 212 / 16%),
+    inset 0 1px 0 rgb(255 255 255 / 42%);
+  font-size: 0.62rem;
+  font-weight: 780;
+  letter-spacing: 0.065em;
   line-height: 1;
   text-transform: uppercase;
   transition:
     background-color 300ms ease,
     color 300ms ease,
+    box-shadow 400ms ease,
     transform 400ms var(--ease-out-expo);
 }
 
 .interested:hover {
-  background: #9bcdbf;
+  background: #fff7ea;
   color: #07100e;
-  transform: translateY(-0.15rem);
+  box-shadow:
+    0 1rem 2.8rem rgb(124 247 212 / 26%),
+    inset 0 1px 0 rgb(255 255 255 / 65%);
+  transform: translateY(-0.22rem) scale(1.02);
 }
 
 .interested span {
-  font-size: 0.85rem;
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #07100e;
+  color: #9bcdbf;
+  font-size: 0.82rem;
+  transition: transform 400ms var(--ease-out-expo);
+}
+
+.interested:hover span {
+  transform: rotate(8deg) translate(0.08rem, -0.08rem);
 }
 
 .closing {
