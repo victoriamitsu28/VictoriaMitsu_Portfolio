@@ -81,11 +81,25 @@ export function ServiceMatrix() {
               <span>{service.strapline}</span>
             </div>
             <p className={styles.description}>{service.description}</p>
-            <ul className={styles.capabilities} aria-label={`${service.title} capabilities`}>
-              {service.capabilities.map((capability) => (
-                <li key={capability}>{capability}</li>
-              ))}
-            </ul>
+            <div className={styles.action}>
+              <ul className={styles.capabilities} aria-label={`${service.title} capabilities`}>
+                {service.capabilities.map((capability) => (
+                  <li key={capability}>{capability}</li>
+                ))}
+              </ul>
+              <a
+                className={styles.interested}
+                href={`https://wa.me/6285929819410?text=${encodeURIComponent(service.whatsappMessage)}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Discuss ${service.title} on WhatsApp`}
+                data-cursor="link"
+                data-cursor-label="WHATSAPP"
+              >
+                Interested
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </li>
         ))}
       </ol>

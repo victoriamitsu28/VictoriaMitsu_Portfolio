@@ -5,6 +5,7 @@ export type ServiceOffering = {
   strapline: string;
   description: string;
   capabilities: readonly string[];
+  whatsappMessage: string;
 };
 
 export const serviceOfferings = [
@@ -21,6 +22,8 @@ export const serviceOfferings = [
       "Frontend systems",
       "API integrations",
     ],
+    whatsappMessage:
+      "Hi Victoria, I'm interested in Apps & Product Builds. I'd like to discuss an app or product idea with you.",
   },
   {
     id: "web",
@@ -35,6 +38,8 @@ export const serviceOfferings = [
       "Performance",
       "Analytics",
     ],
+    whatsappMessage:
+      "Hi Victoria, I'm interested in Web Platforms. I'd like to discuss a website or web platform project with you.",
   },
   {
     id: "ai-automation",
@@ -49,6 +54,8 @@ export const serviceOfferings = [
       "Operational tools",
       "Connected data",
     ],
+    whatsappMessage:
+      "Hi Victoria, I'm interested in AI & Automation. I'd like to discuss an AI system or automation workflow with you.",
   },
   {
     id: "teaching",
@@ -63,5 +70,7 @@ export const serviceOfferings = [
       "Curriculum design",
       "Competition prep",
     ],
+    whatsappMessage:
+      "Hi Victoria, I'm interested in Teaching & Workshops. I'd like to discuss a workshop or mentoring program with you.",
   },
 ] as const satisfies readonly ServiceOffering[];
