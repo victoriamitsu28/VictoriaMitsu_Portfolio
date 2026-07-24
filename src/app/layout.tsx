@@ -11,26 +11,17 @@ const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Victoria Mitsu - Software Engineer & Product Builder",
-    template: "%s - Victoria Mitsu",
+    default: "Victoria Mitsu | Tech Builder for Apps, Web & AI",
+    template: "%s | Victoria Mitsu",
   },
   description:
-    "Portfolio of Victoria Mitsu, a software engineer and product builder working across web development, robotics, education, and community projects.",
+    "Victoria Mitsu builds apps, web platforms, AI systems, automation workflows, and technical learning programs for businesses, teams, schools, and communities.",
   applicationName: "Victoria Mitsu Portfolio",
   authors: [{ name: "Victoria Mitsu", url: siteUrl }],
   creator: "Victoria Mitsu",
   publisher: "Victoria Mitsu",
   category: "technology",
-  keywords: [
-    "software engineer",
-    "product development",
-    "web development",
-    "robotics",
-    "competitive programming",
-    "Indonesia developer",
-    "Medan software developer",
-    "Victoria Mitsu",
-  ],
+
   alternates: { canonical: "/" },
   manifest: "/manifest.webmanifest",
   robots: {
@@ -47,9 +38,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    title: "Victoria Mitsu - Software Engineer & Product Builder",
+    title: "Victoria Mitsu | Tech Builder for Apps, Web & AI",
     description:
-      "Web products, robotics, competition work, and community projects built with care.",
+      "Apps, web platforms, AI systems, automation, and technical learning programs built by Victoria Mitsu.",
     siteName: "Victoria Mitsu Portfolio",
     locale: "en_US",
     images: [
@@ -57,15 +48,15 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Victoria Mitsu, software engineer and product builder",
+        alt: "Victoria Mitsu, technology builder for apps, web, AI, and automation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Victoria Mitsu - Software Engineer & Product Builder",
+    title: "Victoria Mitsu | Tech Builder for Apps, Web & AI",
     description:
-      "Web products, robotics, competition work, and community projects built with care.",
+      "Apps, web platforms, AI systems, automation, and technical learning programs built by Victoria Mitsu.",
     images: ["/opengraph-image"],
   },
   ...(googleSiteVerification

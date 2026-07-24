@@ -60,7 +60,7 @@ export function Header() {
       </Link>
 
       <nav className={styles.navigation} aria-label="Primary navigation">
-        <Link href="/" data-magnetic data-cursor="link" data-cursor-label="HOME">Home</Link>
+        <Link href="/#services" data-magnetic data-cursor="link" data-cursor-label="SERVICES">Services</Link>
         <Link href="/#about" data-magnetic data-cursor="link" data-cursor-label="ABOUT">About</Link>
         <Link href="/" className={styles.mark} aria-label="Homepage" data-magnetic data-cursor="link" data-cursor-label="HOME">
           <Image
@@ -104,15 +104,16 @@ export function Header() {
       >
         <nav aria-label="Mobile navigation" className={styles.mobileNav}>
           <Link href="/" onClick={() => setMenuOpen(false)}>Home <span>01</span></Link>
-          <Link href="/#experience" onClick={() => setMenuOpen(false)}>Work <span>02</span></Link>
-          <Link href="/#competitions" onClick={() => setMenuOpen(false)}>Archive <span>03</span></Link>
-          <Link href="/#about" onClick={() => setMenuOpen(false)}>About <span>04</span></Link>
-          <a href="https://github.com/victoriamitsu28" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>GitHub <span>05</span></a>
-          <a href="https://www.tiktok.com/@victoriamitsu" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>TikTok <span>06</span></a>
-          <a href="https://www.instagram.com/victoriamitsu" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>Instagram <span>07</span></a>
-          <a href="https://www.linkedin.com/in/victoriamitsu" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>LinkedIn <span>08</span></a>
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=victoria.mitsu%40gmail.com" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>Email <span>09</span></a>
-          <a href="https://wa.me/6285929819410" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>WhatsApp <span>10</span></a>
+          <Link href="/#services" onClick={() => setMenuOpen(false)}>Services <span>02</span></Link>
+          <Link href="/#experience" onClick={() => setMenuOpen(false)}>Work <span>03</span></Link>
+          <Link href="/#competitions" onClick={() => setMenuOpen(false)}>Archive <span>04</span></Link>
+          <Link href="/#about" onClick={() => setMenuOpen(false)}>About <span>05</span></Link>
+          <a href="https://github.com/victoriamitsu28" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>GitHub <span>06</span></a>
+          <a href="https://www.tiktok.com/@victoriamitsu" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>TikTok <span>07</span></a>
+          <a href="https://www.instagram.com/victoriamitsu" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>Instagram <span>08</span></a>
+          <a href="https://www.linkedin.com/in/victoriamitsu" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>LinkedIn <span>09</span></a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=victoria.mitsu%40gmail.com" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>Email <span>10</span></a>
+          <a href="https://wa.me/6285929819410" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>WhatsApp <span>11</span></a>
         </nav>
         <div className={styles.mobileMeta}>
           <span>Indonesia</span>

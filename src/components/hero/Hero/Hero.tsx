@@ -256,14 +256,14 @@ export function Hero() {
 
       <div className={styles.intro}>
         <span className={styles.introIndex}>01</span>
-        <h2><span>Tech builder</span><span>Building real projects</span></h2>
+        <h2><span>Tech builder</span><span>Apps, web, AI &amp; automation</span></h2>
       </div>
 
       <p className={styles.sideText}>MEDAN - INDONESIA - 2026</p>
 
       <div className={styles.roleRow}>
         <span className={styles.roleLine} />
-        <p>AI automation &middot; web development<br />apps &middot; creative projects</p>
+        <p>Apps &middot; web platforms &middot; AI systems<br />automation &middot; teaching &amp; workshops</p>
       </div>
 
       <div className={styles.bottomLeft}>

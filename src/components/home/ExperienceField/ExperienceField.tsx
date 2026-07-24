@@ -222,7 +222,7 @@ export function ExperienceField() {
   return (
     <section ref={rootRef} className={styles.experience} id="experience" aria-labelledby="experience-title">
       <header className={styles.intro}>
-        <div className={styles.topline} data-experience-intro><span>03 / Experience</span><span>Products, platforms, teams</span></div>
+        <div className={styles.topline} data-experience-intro><span>04 / Experience</span><span>Products, platforms, teams</span></div>
         <h2 id="experience-title" data-experience-intro>WORK THAT<br /><em>ACTUALLY MOVES.</em></h2>
         <p data-experience-intro>From an automotive sales platform to field-work intelligence and multilingual AI, the work lives across screens, teams, and real operations.</p>
       </header>

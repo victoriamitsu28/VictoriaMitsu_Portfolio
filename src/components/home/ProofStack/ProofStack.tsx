@@ -217,7 +217,7 @@ export function ProofStack() {
     <section ref={rootRef} className={styles.proof} id="competitions" aria-labelledby="competition-title">
       <header className={styles.intro}>
         <div className={styles.topline} data-awards-intro>
-          <span>02 / Competition Record</span>
+          <span>03 / Competition Record</span>
           <span>Robotics, AI, informatics, business</span>
         </div>
         <h2 id="competition-title" data-awards-intro>

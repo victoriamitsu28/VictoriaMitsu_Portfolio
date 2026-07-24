@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import styles from "./ArtDirectionRail.module.scss";
 
-const words = ["WEB", "CODE", "ROBOTICS", "STEM", "MOTION", "IMPACT"];
+const words = ["APPS", "WEB", "AI", "AUTOMATION", "TEACHING", "IMPACT"];
 
 export function ArtDirectionRail() {
   const rootRef = useRef<HTMLElement>(null);
@@ -56,7 +56,7 @@ export function ArtDirectionRail() {
     <section ref={rootRef} id="about" className={styles.root} aria-label="About Victoria's work">
       <div className={styles.meta}>
         <span>Built across disciplines</span>
-        <span>Web / robotics / product / leadership</span>
+        <span>Apps / web / AI / automation / teaching</span>
       </div>
 
       <div className={styles.rail} aria-hidden="true">
@@ -72,8 +72,8 @@ export function ArtDirectionRail() {
       </div>
 
       <p className={styles.statement} data-rail-statement>
-        I enjoy taking a rough idea, figuring out what people actually need,
-        and turning it into something clear, useful, and ready to use.
+        I turn ambitious ideas into useful technology — from apps and web
+        platforms to AI, automation, and hands-on learning.
       </p>
     </section>
   );

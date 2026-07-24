@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Victoria Mitsu Portfolio",
     short_name: "Victoria Mitsu",
-    description: "Software engineer and product builder working across web development, robotics, education, and community projects.",
+    description: "Technology builder for apps, web platforms, AI systems, automation workflows, and technical learning programs.",
     start_url: "/",
     display: "standalone",
     background_color: "#060812",

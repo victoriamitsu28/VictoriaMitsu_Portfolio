@@ -6,7 +6,7 @@ export function ContactFooter() {
     <footer className={styles.footer} id="contact">
       <div className={styles.kicker}>
         <span>Open to ambitious builds</span>
-        <span>Software products / STEM platforms / creative web systems</span>
+        <span>Apps / web platforms / AI / automation / teaching</span>
       </div>
 
       <div className={styles.ctaWrap}>
@@ -28,11 +28,12 @@ export function ContactFooter() {
       <div className={styles.bottom}>
         <div className={styles.identity}>
           <strong>Victoria Mitsu</strong>
-          <span>Software engineer, product builder, creative maker</span>
+          <span>Technology builder across products, systems, and learning</span>
         </div>
 
         <nav aria-label="Footer navigation" className={styles.nav}>
           <Link href="/">Home</Link>
+          <Link href="/#services">Services</Link>
           <Link href="/#experience">Work</Link>
           <Link href="/#competitions">Archive</Link>
           <Link href="/#about">About</Link>
